@@ -3,7 +3,7 @@
 #include <string>
 #include "src/func.hpp"
 
-TEST(FuncTest, BasicAssertions)
+TEST(FuncTest, PrintHelloWorld)
 {
     testing::internal::CaptureStdout();
     print_hello_world();
