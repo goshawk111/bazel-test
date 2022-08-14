@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Cache Bazel
+      uses: actions/cache@v2
+      with:
+        path: |
+          ~/.cache/bazel
+        key: ${{ runner.os }}-${{ hashFiles('WORKSPACE') }}
+
+    - name: Build binary
+      run: |
+        bazelisk build //src:hello-world
+
+    - name: Test
+      run: |
+        bazelisk test --test_output=all test//:hello_test
