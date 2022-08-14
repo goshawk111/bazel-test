@@ -1,8 +1,21 @@
 # Bazel Test
 This is a simple bazel test.
 
+## Running
+```shell
+bazel run //src:hello-world 
+INFO: Analyzed target //src:hello-world (0 packages loaded, 0 targets configured).
+INFO: Found 1 target...
+Target //src:hello-world up-to-date:
+  bazel-bin/src/hello-world
+INFO: Elapsed time: 0.423s, Critical Path: 0.01s
+INFO: 1 process: 1 internal.
+INFO: Build completed successfully, 1 total action
+INFO: Build completed successfully, 1 total action
+Hello World.
+```
 
-## Google Test
+## Test
 ```shell
 bazel test --test_output=all ...
 DEBUG: Rule 'com_google_googletest' indicated that a canonical reproducible form can be obtained by modifying arguments sha256 = "5cf189eb6847b4f8fc603a3ffff3b0771c08eec7dd4bd961bfd45477dd13eb73"
