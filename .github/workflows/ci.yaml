@@ -18,8 +18,8 @@ jobs:
 
     - name: Build binary
       run: |
-        bazelisk build //src:hello-world
+        bazelisk build ...
 
     - name: Test
       run: |
-        bazelisk test --test_output=all //test:hello_test
+        bazelisk test --test_output=all ...
