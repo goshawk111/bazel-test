@@ -1,4 +1,12 @@
-
 #pragma once
+#include <string>
 
-void print_hello_world(void);
+namespace func
+{
+    /**
+     * @brief print input to console
+     *
+     * @param str input string
+     */
+    void print_string(const std::string &str);
+} // namespace func

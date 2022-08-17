@@ -1,9 +1,13 @@
-#include <iostream>
 #include "func.hpp"
+#include <string>
+
+namespace
+{
+    const auto kHelloWorld{std::string("Hello World.")};
+} // anonymous namespace
 
 int main(int argc, char **argv)
 {
-    print_hello_world();
-
+    func::print_string(kHelloWorld);
     return 0;
 }

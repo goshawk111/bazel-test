@@ -3,11 +3,16 @@
 #include <string>
 #include "src/func.hpp"
 
-TEST(FuncTest, PrintHelloWorld)
+TEST(FuncTest, PrintString)
 {
-    testing::internal::CaptureStdout();
-    print_hello_world();
-    const auto output{testing::internal::GetCapturedStdout()};
+    const auto input{std::string("Hello World.")};
+    const auto expected_output{input + "\n"};
 
-    ASSERT_EQ(output, "Hello World.\n");
+    // Start console capture
+    testing::internal::CaptureStdout();
+
+    func::print_string(input);
+
+    const auto output{testing::internal::GetCapturedStdout()};
+    ASSERT_EQ(expected_output, output);
 }

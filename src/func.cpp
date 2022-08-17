@@ -1,7 +1,14 @@
 #include <iostream>
 #include "func.hpp"
-
-void print_hello_world(void)
+namespace func
 {
-    std::cout << "Hello World." << std::endl;
-}
+    /**
+     * @brief print input to console
+     *
+     * @param str input string
+     */
+    void print_string(const std::string &str)
+    {
+        std::cout << str << std::endl;
+    }
+} // namespace func

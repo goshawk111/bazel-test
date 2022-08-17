@@ -4,6 +4,6 @@ cc_test(
     includes = ["src"],
     deps = [
         "@com_google_googletest//:gtest_main",
-        "//src:func",
+        "//src:func-lib",
     ],
 )
