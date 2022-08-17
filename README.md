@@ -3,7 +3,7 @@ This is a simple bazel test.
 
 ## Execution result
 ```shell
-bazel run //src:hello-world 
+$ bazel run //src:hello-world 
 INFO: Analyzed target //src:hello-world (0 packages loaded, 0 targets configured).
 INFO: Found 1 target...
 Target //src:hello-world up-to-date:
