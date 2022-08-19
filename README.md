@@ -1,6 +1,20 @@
 # Bazel Test
 This is a simple bazel test.
 
+## Sequence diagram
+```mermaid
+sequenceDiagram
+    participant main
+    participant func
+    activate main
+    main->>func: call print_string("Hello World.")
+    activate func
+    Note right of func: Print input to console<br/>>$ Hello World.
+    func-->>main: 
+    deactivate func
+    deactivate main
+```
+
 ## Execution result
 ```shell
 $ bazel run //src:hello-world 
